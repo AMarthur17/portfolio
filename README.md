@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfólio — Arthur Marques Araújo
 
-## Getting Started
+Página pessoal em Next.js com currículo em PDF.
 
-First, run the development server:
+## Rodar localmente
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre em http://localhost:3000
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Como editar
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Todo o conteúdo do site fica em **um único arquivo**: [`src/data/perfil.js`](src/data/perfil.js).
+Alterar nome, resumo, experiências, projetos, competências ou contato é só mexer ali — nenhum
+componente precisa ser tocado.
 
-## Learn More
+O conteúdo do **currículo em PDF** fica separado, no topo de
+[`scripts/gerar_curriculo.py`](scripts/gerar_curriculo.py). Depois de editar, regenere:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+python scripts/gerar_curriculo.py
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+O PDF é gravado em `public/curriculo-arthur-marques.pdf`, que é o arquivo servido pelo botão
+"Currículo em PDF" na home. Requer `reportlab` (`pip install reportlab`).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+> Os dois lugares são independentes de propósito: o site pode ter mais detalhes que o PDF,
+> que precisa caber em uma página.
 
-## Deploy on Vercel
+## Publicar na Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Suba o projeto para um repositório no GitHub.
+2. Em [vercel.com/new](https://vercel.com/new), importe o repositório.
+3. A Vercel detecta Next.js sozinha — é só confirmar. Sem variáveis de ambiente.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Estrutura
+
+```
+src/
+  data/perfil.js       ← todo o conteúdo do site
+  app/
+    layout.js          ← metadata e fontes
+    page.js            ← ordem das seções
+    globals.css        ← paleta e tokens de tema
+  components/          ← uma seção por arquivo
+scripts/
+  gerar_curriculo.py   ← gera o PDF do currículo
+public/
+  curriculo-arthur-marques.pdf
+```
+
+## Stack
+
+Next.js 16 (App Router) · React 19 · Tailwind CSS 4 · ReportLab (PDF)
