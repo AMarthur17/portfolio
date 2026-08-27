@@ -35,8 +35,8 @@ NOME = "ARTHUR MARQUES ARAÚJO"
 
 CONTATO_LINHA_1 = "(83) 99643-9771 &nbsp;·&nbsp; arthurmarquesaraujo@gmail.com &nbsp;·&nbsp; Campina Grande, PB"
 CONTATO_LINHA_2 = (
-    "GitHub: AMarthur17 &nbsp;·&nbsp; LinkedIn: in/arthur-araujo-039011220 "
-    "&nbsp;·&nbsp; Idiomas: Português (nativo), Inglês (intermediário)"
+    "Portfólio: portfolio-tan-two-15.vercel.app &nbsp;·&nbsp; GitHub: AMarthur17 "
+    "&nbsp;·&nbsp; LinkedIn: in/arthur-araujo-039011220"
 )
 
 RESUMO = (
@@ -103,12 +103,11 @@ PROJETOS = [
     },
     {
         "titulo": "UberPb",
-        "subtitulo": "Repositório de usuários com persistência local · Java 21, Maven, Jackson, JUnit",
+        "subtitulo": "Projeto de Engenharia de Software II · Java 21, Maven, Jackson, JUnit",
         "bullets": [
             "Sistema de gestão de usuários (passageiros e motoristas) com CRUD completo, busca por CPF e "
             "e-mail, validação de duplicatas e geração automática de IDs.",
             "Implementação de thread-safety com locks de leitura/escrita e cobertura por testes unitários.",
-            "Projeto da disciplina de Engenharia de Software II.",
         ],
     },
 ]
@@ -121,10 +120,10 @@ COMPETENCIAS = [
     ("Testes", "Jest, React Native Testing Library, JUnit"),
     ("Design e Produto", "Figma, prototipação, usabilidade"),
     ("Ferramentas", "Git, GitHub, Maven"),
+    ("Idiomas", "Português (nativo), Inglês (intermediário)"),
     (
         "Conceitos",
-        "APIs REST, Programação Orientada a Objetos, Estruturas de Dados, "
-        "Engenharia de Software, Gerência de Projetos",
+        "APIs REST, POO, Estruturas de Dados, Engenharia de Software, Gerência de Projetos",
     ),
 ]
 
