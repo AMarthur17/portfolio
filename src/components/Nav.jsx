@@ -24,7 +24,9 @@ export default function Nav() {
         >
           {iniciais}
         </a>
-        <ul className="flex items-center gap-1 text-sm sm:gap-2">
+        {/* Em telas estreitas os cinco links não cabem: mostramos só o
+            contato, que é a ação que importa para quem avalia. */}
+        <ul className="hidden items-center gap-1 text-sm sm:flex sm:gap-2">
           {links.map((l) => (
             <li key={l.href}>
               <a
@@ -36,6 +38,12 @@ export default function Nav() {
             </li>
           ))}
         </ul>
+        <a
+          href="#contato"
+          className="rounded-full border border-line bg-surface px-4 py-1.5 text-sm text-foreground sm:hidden"
+        >
+          Contato
+        </a>
       </nav>
     </header>
   );
