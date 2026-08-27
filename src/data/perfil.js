@@ -29,6 +29,7 @@ export const formacao = [
     instituicao: "Universidade Estadual da Paraíba (UEPB)",
     periodo: "2022.2 — 2027.1 (previsto)",
     detalhes: [
+      "Bolsista PIBIC 2025 (Iniciação Científica) no NUTES/UEPB: desenvolvimento do aplicativo móvel da Plataforma Aberta Mulheres de Peito, com apresentação e relatório científico.",
       "Disciplinas: Estruturas de Dados e Algoritmos, Programação Orientada a Objetos, Engenharia de Software, Gerência de Projetos, Desenvolvimento Web, Computação Gráfica, Banco de Dados.",
     ],
   },
@@ -44,18 +45,38 @@ export const experiencias = [
     projeto: "Mulheres de Peito",
     projetoLink: "https://play.google.com/store/apps/details?id=com.anonymous.pm",
     bullets: [
-      "Desenvolvimento do aplicativo Mulheres de Peito em React Native, TypeScript e Expo, publicado na Google Play Store.",
-      "Plataforma de rastreio precoce de câncer de mama construída pelo NUTES/UEPB em parceria com a ONG Mulheres de Peito, com patrocínio do Serpro pelo Programa Agora — Tecnologia para Mulheres Minorizadas.",
-      "Aplicativo voltado a mulheres em situação de vulnerabilidade: cadastro de pacientes, relato de sintomas e questionário de triagem de risco.",
-      "Construção de interfaces a partir de protótipos no Figma, com atenção a usabilidade para um público não técnico.",
-      "Integração do app com as APIs do backend da plataforma.",
+      "Desenvolvimento do aplicativo móvel da Plataforma Aberta Mulheres de Peito em React Native, TypeScript e Expo — rastreamento gratuito de câncer de mama, publicado na Google Play Store. Projeto do NUTES/UEPB com a ONG Mulheres de Peito e patrocínio do Serpro.",
+      "Fluxo completo de rastreamento em 8 telas: aceite dos termos em conformidade com a LGPD, identificação por CPF com validação local dos dígitos, questionário de 10 perguntas com indicador de progresso e triagem imediata do caso.",
+      "Arquitetura em camadas (apresentação, estado, serviços e comunicação), com Context API para estado global e serviços isolados por domínio, facilitando a manutenção por futuras equipes.",
+      "Integração com a API da plataforma e com a API de localidades do IBGE; atualização de cadastro por CPF via POST/PATCH, eliminando duplicidade na base.",
+      "Resiliência em redes instáveis: monitoramento contínuo de conectividade e repetição automática de requisições com espera exponencial (axios-retry).",
     ],
   },
 ];
 
 export const projetos = [
   {
+    nome: "Mulheres de Peito — Aplicativo",
+    tagline: "Rastreio precoce de câncer de mama",
+    descricao:
+      "Aplicativo do NUTES/UEPB com a ONG Mulheres de Peito, publicado na Google Play Store. Em 8 telas a usuária aceita os termos, se identifica por CPF, responde 10 perguntas sobre a saúde das mamas e recebe a triagem na hora — casos com relato de nódulo são sinalizados para a equipe entrar em contato. Feito para redes instáveis, com repetição automática de requisições. Objeto da minha bolsa PIBIC 2025.",
+    stack: [
+      "React Native",
+      "TypeScript",
+      "Expo",
+      "React Navigation",
+      "Context API",
+      "Axios",
+      "Figma",
+    ],
+    imagem: "/screenshots/mulheres-app.png",
+    link: "https://play.google.com/store/apps/details?id=com.anonymous.pm",
+    nota: "Ver na Google Play",
+    destaque: true,
+  },
+  {
     nome: "FinançasVilla",
+    imagem: "/screenshots/financasvilla.png",
     tagline: "Gestão financeira para um restaurante",
     descricao:
       "Aplicativo mobile offline desenvolvido para o restaurante Villa da Serra, substituindo o controle em papel. Lançamento diário de faturamento por forma de pagamento, despesas por categoria, folha de funcionários com vales e notificações de pagamento, gráficos por período, backup versionado e exportação em CSV. Coberto por 111 testes automatizados.",
@@ -99,6 +120,7 @@ export const competencias = [
       "React Native",
       "Expo",
       "Expo Router",
+      "React Navigation",
       "SQLite local",
       "Publicação na Google Play Store",
     ],
@@ -113,7 +135,11 @@ export const competencias = [
   },
   {
     area: "Estado & dados",
-    itens: ["Zustand", "SQLite", "Modelagem relacional"],
+    itens: ["Context API", "Zustand", "SQLite", "Modelagem relacional"],
+  },
+  {
+    area: "Integração",
+    itens: ["APIs REST", "Axios", "Retry com backoff", "Uso offline"],
   },
   {
     area: "Testes",

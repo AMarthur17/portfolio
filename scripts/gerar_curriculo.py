@@ -40,10 +40,10 @@ CONTATO_LINHA_2 = (
 )
 
 RESUMO = (
-    "Desenvolvedor mobile com três anos de atuação no NUTES/UEPB, onde desenvolvo o aplicativo "
-    "<b>Mulheres de Peito</b> em React Native e TypeScript — uma plataforma de rastreio precoce de "
-    "câncer de mama publicada na Google Play Store. Experiência do protótipo no Figma até a entrega "
-    "em produção, com foco em usabilidade para um público não técnico."
+    "Desenvolvedor mobile com três anos de atuação no NUTES/UEPB e bolsista PIBIC, onde desenvolvi o "
+    "aplicativo <b>Mulheres de Peito</b> em React Native e TypeScript — rastreamento gratuito de câncer "
+    "de mama publicado na Google Play Store. Experiência do protótipo no Figma à entrega em produção, "
+    "com atenção a usabilidade, LGPD e uso em redes instáveis."
 )
 
 FORMACAO = [
@@ -52,6 +52,9 @@ FORMACAO = [
         "cargo": "Universidade Estadual da Paraíba (UEPB)",
         "periodo": "2022.2 – 2027.1 (previsto)",
         "bullets": [
+            "<b>Bolsista PIBIC 2025</b> (Iniciação Científica) no NUTES/UEPB: desenvolvimento do "
+            "aplicativo móvel da Plataforma Aberta Mulheres de Peito, com apresentação e relatório "
+            "científico.",
             "Disciplinas: Estruturas de Dados e Algoritmos, Programação Orientada a Objetos, "
             "Engenharia de Software, Gerência de Projetos, Desenvolvimento Web, Computação Gráfica, "
             "Banco de Dados.",
@@ -65,16 +68,18 @@ EXPERIENCIA = [
         "periodo": "2023.2 – 09/2026",
         "cargo": "Desenvolvedor Mobile",
         "bullets": [
-            "Desenvolvimento do aplicativo <b>Mulheres de Peito</b> em React Native, TypeScript e Expo, "
-            "publicado na Google Play Store.",
-            "Plataforma de rastreio precoce de câncer de mama construída pelo NUTES/UEPB em parceria com "
-            "a ONG Mulheres de Peito, com patrocínio do Serpro pelo Programa Agora — Tecnologia para "
-            "Mulheres Minorizadas.",
-            "Aplicativo voltado a mulheres em situação de vulnerabilidade: cadastro de pacientes, relato "
-            "de sintomas e questionário de triagem de risco.",
-            "Construção de interfaces a partir de protótipos no Figma, com atenção a usabilidade para um "
-            "público não técnico.",
-            "Integração do aplicativo com as APIs do backend da plataforma.",
+            "Desenvolvimento do aplicativo móvel da <b>Plataforma Aberta Mulheres de Peito</b> em React "
+            "Native, TypeScript e Expo — rastreamento gratuito de câncer de mama, publicado na Google "
+            "Play Store. Projeto do NUTES/UEPB com a ONG Mulheres de Peito e patrocínio do Serpro.",
+            "Fluxo completo de rastreamento em 8 telas: aceite dos termos em conformidade com a LGPD, "
+            "identificação por CPF com validação local dos dígitos, questionário de 10 perguntas com "
+            "indicador de progresso e triagem imediata do caso.",
+            "Arquitetura em camadas (apresentação, estado, serviços e comunicação), com Context API para "
+            "estado global e serviços isolados por domínio, facilitando a manutenção por futuras equipes.",
+            "Integração com a API da plataforma e com a API de localidades do IBGE; atualização de "
+            "cadastro por CPF via POST/PATCH, eliminando duplicidade na base.",
+            "Resiliência em redes instáveis: monitoramento contínuo de conectividade e repetição "
+            "automática de requisições com espera exponencial (axios-retry).",
         ],
     },
 ]
@@ -94,20 +99,11 @@ PROJETOS = [
         ],
     },
     {
-        "titulo": "RH-Master",
-        "subtitulo": "Sistema de gestão de recursos humanos · JavaScript",
-        "bullets": [
-            "Aplicação web dividida em frontend e backend para automatizar processos de RH. Projeto da "
-            "disciplina de Gerência de Projetos.",
-        ],
-    },
-    {
         "titulo": "UberPb",
         "subtitulo": "Projeto de Engenharia de Software II · Java 21, Maven, Jackson, JUnit",
         "bullets": [
-            "Sistema de gestão de usuários (passageiros e motoristas) com CRUD completo, busca por CPF e "
-            "e-mail, validação de duplicatas e geração automática de IDs.",
-            "Implementação de thread-safety com locks de leitura/escrita e cobertura por testes unitários.",
+            "Gestão de usuários com CRUD completo, busca por CPF e e-mail e validação de duplicatas; "
+            "thread-safety com locks de leitura/escrita e cobertura por testes unitários.",
         ],
     },
 ]
